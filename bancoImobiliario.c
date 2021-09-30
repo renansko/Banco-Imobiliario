@@ -1000,7 +1000,111 @@ for (int i = 0; i < quant_j; i++)
         
 
         
+    posicao_jogadores(int y2, int posicao, int quant){
+
+int jog1, jog2, jog3, jog4;
+
+// if ( posicao == 0) {
+
+//     int jog1 = posicao;
+//         jog1 = jog1 +92;
+
+//         int jog2 = posicao;
+//         jog2 = jog2 + 93;
+
+//         int jog3 = posicao;
+//         jog3 = jog3 + 94;
+
+//         int jog4 = posicao;
+//         jog4 = jog4 + 95;
+
+// }
+if (posicao < 10)
+{
+         jog1 = posicao;
+        jog1 = jog1 *10 + 2;
+
+         jog2 = posicao;
+        jog2 = jog2 *10 + 3;
+
+         jog3 = posicao;
+        jog3 = jog3 *10 + 4;
+
+         jog4 = posicao;
+        jog4 = jog4 *10 + 5;
     
+}
+
+
+        if(quant == 2){
+
+            gotoxy(jog1, 10*y2-1);
+            printf("\033[1m\033[30m");
+            putchar(219);
+            putchar(219);
+            printf("\033[37m");
+            gotoxy(jog2, 10*y2-1);
+            printf("\033[1m\033[34m");
+            putchar(219);
+            putchar(219);
+            printf("\033[37m");
+
+        }
+
+        if(quant == 3){
+
+            gotoxy(92, 10*y2-1);
+            printf("\033[1m\033[30m");
+            putchar(219);
+            putchar(219);
+            printf("\033[37m");
+            gotoxy(93, 10*y2-1);
+            printf("\033[1m\033[34m");
+            putchar(219);
+            putchar(219);
+            printf("\033[37m");
+            gotoxy(94, 10*y2-1);
+            printf("\033[1m\033[32m");
+            putchar(219);
+            putchar(219);
+            printf("\033[37m");
+
+        }
+          if(quant == 3){
+
+            gotoxy(92, 10*y2-1);
+            printf("\033[1m\033[30m");
+            putchar(219);
+            putchar(219);
+            printf("\033[37m");
+            gotoxy(93, 10*y2-1);
+            printf("\033[1m\033[34m");
+            putchar(219);
+            putchar(219);
+            printf("\033[37m");
+            gotoxy(94, 10*y2-1);
+            printf("\033[1m\033[32m");
+            putchar(219);
+            putchar(219);
+            printf("\033[37m");
+              
+             gotoxy(94, 10*y2-1);
+            printf("\033[1m\033[32m");
+            putchar(219);
+            putchar(219);
+            printf("\033[37m");
+            gotoxy(95, 10*y2-1);
+            printf("\033[1m\033[33m");
+            putchar(219);
+            putchar(219);
+            printf("\033[37m");
+
+        }
+        
+          
+
+
+    }
 
     
 int main ()
@@ -1206,26 +1310,8 @@ while (1)
 
 
             }
-            gotoxy(92, 10*y2-1);
-            printf("\033[1m\033[30m");
-            putchar(219);
-            putchar(219);
-            printf("\033[37m");
-            gotoxy(93, 10*y2-1);
-            printf("\033[1m\033[34m");
-            putchar(219);
-            putchar(219);
-            printf("\033[37m");
-             gotoxy(94, 10*y2-1);
-            printf("\033[1m\033[32m");
-            putchar(219);
-            putchar(219);
-            printf("\033[37m");
-            gotoxy(95, 10*y2-1);
-            printf("\033[1m\033[33m");
-            putchar(219);
-            putchar(219);
-            printf("\033[37m");
+
+            posicao_jogadores(y2, jogadores[i].posicao, quant_j);
 
 
 
