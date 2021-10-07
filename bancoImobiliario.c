@@ -3723,7 +3723,7 @@ while (1)
    
     tabuleiro();
 
-    int ale;
+    int ale, ale_2;
     int fim;
     int comprado;
 
@@ -3737,24 +3737,6 @@ while (1)
         int temp;
          int i;
         int y2 =6;
-
-    
-        
-        for ( k = 0; k < quant_j; k++)
-        {
-            temp = jogadores[k].dinheiro;
-            if (temp == 0)
-            {
-                quant_j = quant_j -1;
-            }
-            if (quant_j == 0)
-            {
-                fim = 0;
-            }
-
-        }
-        
- 
 
       
         for (i = 0; i < quant_j; i++)
@@ -3812,9 +3794,12 @@ while (1)
 
 
 // CASAS AINDA NÂO COMPRADAS ----------------------------------
-        for (int g = 0; g < 40; g++)
-        {
-           if (jogadores[i].posicao == hipotecas[g].posicao && hipotecas[g].comprado == 5 || hipotecas[g].comprado > 5)
+      //   for (int g = 0; g < 40; g++)
+      //   {
+      //      gotoxy(110,g);
+      //      printf("%d", g);
+          // if (jogadores[i].posicao == hipotecas[g].posicao && hipotecas[g].comprado == 5 || hipotecas[g].comprado > 5)
+         if (jogadores[i].posicao == hipotecas[jogadores[i].posicao].posicao && hipotecas[jogadores[i].posicao].comprado == 5 || hipotecas[jogadores[i].posicao].comprado > 5)
         {
 
              if (jogadores[i].posicao == 30)
@@ -3829,6 +3814,252 @@ while (1)
             }
             else if (jogadores[i].posicao == 2 || jogadores[i].posicao == 12 || jogadores[i].posicao == 16 || jogadores[i].posicao == 22 || jogadores[i].posicao == 27 || jogadores[i].posicao == 37 )
             {
+            ale_2  = (rand()%18);
+            if(ale_2 == 0){
+            gotoxy(13, y2+8);
+            printf("\033[1m de quem foi a incrivel ideia       ");
+            gotoxy(13, y2+9);
+            printf("\033[1m de uniformizar a rapaziada com     ");
+            gotoxy(13, y2+10);
+            printf("\033[1m boné de grife??                    ");
+            gotoxy(13, y2+11);
+            printf("\033[1m Pague BI$ 25                       ");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro - 25;
+            }
+               if(ale_2 == 1){
+            gotoxy(13, y2+8);
+            printf("\033[1m Voce aproveitou o feriado       ");
+            gotoxy(13, y2+9);
+            printf("\033[1m visitar um amigo na Regiao dos  ");
+            gotoxy(13, y2+10);
+            printf("\033[1m lagos                           ");
+            gotoxy(13, y2+11);
+            printf("\033[1m Pague BI$ 45                    ");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro - 45;
+            }
+                   if(ale_2 == 2){
+            gotoxy(13, y2+8);
+            printf("\033[1m Chegou o verao mais cedo     ");
+            gotoxy(13, y2+9);
+            printf("\033[1m e o bar da rapaziada ta precisando     ");
+            gotoxy(13, y2+10);
+            printf("\033[1m de um ar condicionado novo            ");
+            gotoxy(13, y2+11);
+            printf("\033[1m Pague BI$ 45                          ");
+
+          
+            }
+                   if(ale_2 == 3){
+            gotoxy(13, y2+8);
+            printf("\033[1m Os advogados estao lapidando          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m seu patrimonio. Era melhor ter        ");
+            gotoxy(13, y2+10);
+            printf("\033[1m andado na linha                       ");
+            gotoxy(13, y2+11);
+            printf("\033[1m Pague BI$ 30                       ");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro - 30;
+            }
+
+            if(ale_2 == 4){
+            gotoxy(13, y2+8);
+            printf("\033[1m A comunidade deu aquela forca      ");
+            gotoxy(13, y2+9);
+            printf("\033[1m pro candidato, mas ele nao se      ");
+            gotoxy(13, y2+10);
+            printf("\033[1m elegeu...                          ");
+            gotoxy(13, y2+11);
+            printf("\033[1m Pague BI$ 50                       ");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro - 50;
+            }
+
+                   if(ale_2 == 5){
+            gotoxy(13, y2+8);
+            printf("\033[1m As maquinas de caça-niquel      ");
+            gotoxy(13, y2+9);
+            printf("\033[1m estavam desreguiadas e deram       ");
+            gotoxy(13, y2+10);
+            printf("\033[1m um baita prejuizo               ");
+            gotoxy(13, y2+11);
+            printf("\033[1m Pague BI$ 50                    ");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro - 50;
+            }
+                   if(ale_2 == 6){
+            gotoxy(13, y2+8);
+            printf("\033[1m A central de TV ta precisando   ");
+            gotoxy(13, y2+9);
+            printf("\033[1m de reparos e a Anatel nao vai      ");
+            gotoxy(13, y2+10);
+            printf("\033[1m Ajudar                       ");
+            gotoxy(13, y2+11);
+            printf("\033[1m Pague BI$ 30              ");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro - 30;
+            }
+                   if(ale_2 == 7){
+            gotoxy(13, y2+8);
+            printf("\033[1m Sua Toyota Hiluz esta              ");
+            gotoxy(13, y2+9);
+            printf("\033[1m pedindo tapetes novos              ");
+            gotoxy(13, y2+10);
+            printf("\033[1m TOyota KKKKKKK               ");
+            gotoxy(13, y2+11);
+            printf("\033[1m Pague BI$ 25                 ");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro - 25;
+            }
+                   if(ale_2 == 8){
+            gotoxy(13, y2+8);
+            printf("\033[1m Aleatorio???? KKK");
+            gotoxy(13, y2+9);
+            printf("\033[1m passa 15 conto ae");
+            gotoxy(13, y2+10);
+            printf("\033[1m            ");
+            gotoxy(13, y2+11);
+            printf("\033[1m Pague BI$ 15                    ");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro - 15;
+            }
+                   if(ale_2 == 9){
+            gotoxy(13, y2+8);
+            printf("\033[1m O servicode internet banda");
+            gotoxy(13, y2+9);
+            printf("\033[1m magra esta bombando a lan");
+            gotoxy(13, y2+10);
+            printf("\033[1m House da firma. E a grana ");
+            gotoxy(13, y2+11);
+            printf("\033[1m nao eh virtual. receba: BI$ 100 ");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro + 100;
+            }
+                if(ale_2 == 10){
+            gotoxy(13, y2+8);
+            printf("\033[1m O Seguro de incendio do    ");
+            gotoxy(13, y2+9);
+            printf("\033[1m transporte alternativo da         ");
+            gotoxy(13, y2+10);
+            printf("\033[1m sua comunidade aumentou :(      ");
+            gotoxy(13, y2+11);
+            printf("\033[1m mas quem recolhe eh voce. receba: BI$ 80");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro + 80;
+            }
+              if(ale_2 == 11){
+            gotoxy(13, y2+8);
+            printf("\033[1m Dia de são jorge em Quintino e   ");
+            gotoxy(13, y2+9);
+            printf("\033[1m e as barracas estao vendendo      ");
+            gotoxy(13, y2+10);
+            printf("\033[1m ate promessa de politico                   ");
+            gotoxy(13, y2+11);
+            printf("\033[1m receba: BI$ 100");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro + 100;
+            }
+              if(ale_2 == 12){
+            gotoxy(13, y2+8);
+            printf("\033[1m O sistema de encanamento       ");
+            gotoxy(13, y2+9);
+            printf("\033[1m da comunidade funciona         ");
+            gotoxy(13, y2+10);
+            printf("\033[1m que eh uma maravilha            ");
+            gotoxy(13, y2+11);
+            printf("\033[1m  receba: BI$ 50 de cada jogador             " );
+
+            for (int f = 0; f < quant_j; f++)
+            {
+               if (i != f)
+               {
+                  jogadores[f].dinheiro = jogadores[f].dinheiro - 50;
+               }
+               
+               jogadores[i].dinheiro = jogadores[i].dinheiro + 50;
+               
+            }
+            
+            }
+               if(ale_2 == 13){
+
+            gotoxy(13, y2+8);
+            printf("\033[1m As eleisoes estao ai           ");
+            gotoxy(13, y2+9);
+            printf("\033[1m mas esse papo de propaganda      ");
+            gotoxy(13, y2+10);
+            printf("\033[1m eleitoral gratuita eh so na tv      ");
+            gotoxy(13, y2+11);
+            printf("\033[1m receba: BI$ 150                     ");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro + 150;
+            
+            }
+                 if(ale_2 == 14){
+            gotoxy(13, y2+8);
+            printf("\033[1m Nao faca perguntas va ate  ");
+            gotoxy(13, y2+9);
+            printf("\033[1m o ponto de partida          ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                              ");
+            gotoxy(13, y2+11);
+            printf("\033[1m receba: BI$ 200                    " );
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro + 200;
+            jogadores[i].posicao = 1;
+            }
+                 if(ale_2 == 15){
+            gotoxy(13, y2+8);
+            printf("\033[1m A bandidagem esta se matando   ");
+            gotoxy(13, y2+9);
+            printf("\033[1m e aliviando o trabalho da turma ");
+            gotoxy(13, y2+10);
+            printf("\033[1m alugue mais vezes seu revolver   ");
+            gotoxy(13, y2+11);
+            printf("\033[1m receba: BI$ 20                       ");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro + 20;
+            }
+                 if(ale_2 == 16){
+            gotoxy(13, y2+8);
+            printf("\033[1m Voce deu duro essa semana");
+            gotoxy(13, y2+9);
+            printf("\033[1m hoje e dia de rateio");
+            gotoxy(13, y2+10);
+            printf("\033[1m                          ");
+            gotoxy(13, y2+11);
+            printf("\033[1m receba: BI$ 200                      ");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro + 200;
+            }
+                 if(ale_2 == 17){
+            gotoxy(13, y2+8);
+            printf("\033[1m Outro terreninho foi vendido");
+            gotoxy(13, y2+9);
+            printf("\033[1m na comunidade e 20 porcento");
+            gotoxy(13, y2+10);
+            printf("\033[1m eh seu                       ");
+            gotoxy(13, y2+11);
+            printf("\033[1m receba: BI$ 50                     ");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro + 50;
+            }
+                 if(ale_2 == 18){
+            gotoxy(13, y2+8);
+            printf("\033[1m Quinta feira dia de cobrar");
+            gotoxy(13, y2+9);
+            printf("\033[1m impostos do pessoal da");
+            gotoxy(13, y2+10);
+            printf("\033[1m do pessoal da lotacao       ");
+            gotoxy(13, y2+11);
+            printf("\033[1m receba: BI$ 45               ");
+
+            jogadores[i].dinheiro = jogadores[i].dinheiro + 45;
+            }
+
+            // -----------------------------
             gotoxy(13, y2+6);
             printf("                                                      ");
             gotoxy(13, y2+7);
@@ -3838,16 +4069,15 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m                 ");
             }
-             else if (jogadores[i].prisao == 1)
-        {
+            if (jogadores[i].prisao == 1)
+            {
             gotoxy(13, y2+20);
             printf("Jogador %d esta na prisao ate outro utrapasar a linha de comeco    ", i);
             gotoxy(13, y2+7);
             printf("\033[1m                  ");
             continue;
-           
-            
-        }
+            }
+
             else  if (jogadores[i].posicao == 10)
             {
             gotoxy(13, y2+6);
@@ -3870,6 +4100,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 200  ");
             jogadores[i].dinheiro = jogadores[i].dinheiro + 200 ;
+
+            
             }
               else if (jogadores[i].posicao == 24)
             {
@@ -3902,6 +4134,15 @@ while (1)
             printf("Deseja comprar A compania?             ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 200  ");
+            gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
            
              else if (jogadores[i].posicao == 1)
@@ -3914,6 +4155,15 @@ while (1)
             printf("Deseja comprar Leblon?           ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 100  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
              else  if (jogadores[i].posicao == 3)
             {
@@ -3925,6 +4175,15 @@ while (1)
             printf("Deseja comprar Av Prst Vargas?       ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 60");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
               else   if (jogadores[i].posicao == 4)
             {
@@ -3936,6 +4195,15 @@ while (1)
             printf("Deseja comprar Av S. de cabana?       ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 60  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
               else   if (jogadores[i].posicao == 6)
             {
@@ -3947,6 +4215,15 @@ while (1)
             printf("Deseja comprar Av Brig. Faria?       ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 240  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
                else   if (jogadores[i].posicao == 8)
             {
@@ -3958,6 +4235,15 @@ while (1)
             printf("Deseja comprar Av Reboucas?       ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 220  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
             else   if (jogadores[i].posicao == 9)
             {
@@ -3969,6 +4255,15 @@ while (1)
             printf("Deseja comprar Av 9 de Julho?       ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 220  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
           
               else  if (jogadores[i].posicao == 11)
@@ -3978,9 +4273,18 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m                                                ");   
             gotoxy(13, y2+6);
-            printf("Deseja compra Av Europa?       ");
+            printf("Deseja comprar Av Europa?       ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 200  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
             else if (jogadores[i].posicao == 13)
             {
@@ -3989,9 +4293,18 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m                                                ");   
             gotoxy(13, y2+6);
-            printf("Deseja compra Rua augusta?       ");
+            printf("Deseja comprar Rua augusta?       ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 180  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
             else if (jogadores[i].posicao == 14)
             {
@@ -4000,9 +4313,18 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m                                                ");   
             gotoxy(13, y2+6);
-            printf("Deseja compra Rua Pacaembu?       ");
+            printf("Deseja comprar Rua Pacaembu?       ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 180  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
             else if (jogadores[i].posicao == 17)
             {
@@ -4012,9 +4334,18 @@ while (1)
             printf("\033[1m                                                ");
 
             gotoxy(13, y2+6);
-            printf("Deseja compra Interlagos?       ");
+            printf("Deseja comprar Interlagos?       ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 380  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
            
             else if (jogadores[i].posicao == 19)
@@ -4024,9 +4355,18 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m                                                ");   
             gotoxy(13, y2+6);
-            printf("Deseja compra Morumbi?       ");
+            printf("Deseja comprar Morumbi?       ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 400  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
              else if (jogadores[i].posicao == 20)
             {
@@ -4038,6 +4378,15 @@ while (1)
             printf("Parada LIVRE              ");
             gotoxy(13, y2+7);
             printf("\033[1m                   ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
               else if (jogadores[i].posicao == 21)
             {
@@ -4046,9 +4395,18 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m                                                ");   
             gotoxy(13, y2+6);
-            printf("Deseja compra Flamengo?              ");
+            printf("Deseja comprar Flamengo?              ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 120  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
               else if (jogadores[i].posicao == 23)
             {
@@ -4057,9 +4415,18 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m                                                ");   
             gotoxy(13, y2+6);
-            printf("Deseja compra Botafogo?              ");
+            printf("Deseja comprar Botafogo?              ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 100  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
             }
            
              else if (jogadores[i].posicao == 26)
@@ -4072,6 +4439,15 @@ while (1)
             printf("Deseja comprar Av Brasil ?              ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 160  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
          
             }
               else if (jogadores[i].posicao == 28)
@@ -4084,6 +4460,15 @@ while (1)
             printf("Deseja comprar Av Paulista ?              ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 140  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
 
             }
              else if (jogadores[i].posicao == 29)
@@ -4096,6 +4481,15 @@ while (1)
             printf("Deseja comprar Jardim Europa ?              ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 140  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
 
             }
               else if (jogadores[i].posicao ==  31)
@@ -4108,6 +4502,15 @@ while (1)
             printf("Deseja comprar Capacapana ?              ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 260  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
 
             }
                           else if (jogadores[i].posicao ==  33)
@@ -4120,6 +4523,15 @@ while (1)
             printf("Deseja comprar Av vieira Souto ?              ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 320  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
 
             }
                      else if (jogadores[i].posicao ==  34)
@@ -4132,6 +4544,15 @@ while (1)
             printf("Deseja comprar Av Atlantica  ?              ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 300  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
 
             }
                     else if (jogadores[i].posicao ==  36)
@@ -4144,6 +4565,15 @@ while (1)
             printf("Deseja comprar Ipanema  ?              ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 300  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
 
             }
                   else if (jogadores[i].posicao ==  38)
@@ -4156,6 +4586,15 @@ while (1)
             printf("Deseja comprar Jardim Paulista  ?              ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 280  ");
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
 
             }
                  else if (jogadores[i].posicao ==  39)
@@ -4170,13 +4609,14 @@ while (1)
             printf("\033[1m Valor : BI$ 260  ");
 
             }
- }
+ //}
         }
 
-         for (int h = 0; h < 40; h++)
-        {
-           if (jogadores[i].posicao == hipotecas[h].posicao && hipotecas[h].comprado != 5)
-        {
+         // for (int h = 0; h < 40; h++)
+         // {
+          //  if (jogadores[i].posicao == hipotecas[h].posicao && hipotecas[h].comprado != 5)
+           if (jogadores[i].posicao == hipotecas[jogadores[i].posicao].posicao && hipotecas[jogadores[i].posicao].comprado != 5)
+         {
 
            int acc_1;
 
@@ -4195,14 +4635,32 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m                                                ");
             gotoxy(13, y2+6);
-            printf("Ja foi comprado pague o jogador: %d     ", hipotecas[h].comprado + 1);
+            printf("Ja foi comprado pague o jogador: %d     ", hipotecas[jogadores[i].posicao].comprado + 1);
             gotoxy(13, y2+7);
-            acc_1 = 100 * ale;
+            acc_1 = 200 * ale;
             printf("\033[1m valor pago de : BI$ %d  ", acc_1);
 
             jogadores[i].dinheiro = jogadores[i].dinheiro - acc_1;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + acc_1;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + acc_1;
 
+            gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            
+               gotoxy(13, y2+8);
+            printf("\033[1m                                          ");
+            gotoxy(13, y2+9);
+            printf("\033[1m                                            ");
+            gotoxy(13, y2+10);
+            printf("\033[1m                                             ");
+            gotoxy(13, y2+11);
+            printf("\033[1m                                             ");
+            
 
             }
            
@@ -4217,8 +4675,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 10     ");
 
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
             }
              else  if (jogadores[i].posicao == 3)
@@ -4232,8 +4690,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 6");
 
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
             }
               else   if (jogadores[i].posicao == 4)
@@ -4247,8 +4705,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 6  ");
 
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
             }
               else   if (jogadores[i].posicao == 6)
@@ -4262,8 +4720,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 24  ");
 
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
             }
                else   if (jogadores[i].posicao == 8)
@@ -4277,8 +4735,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 22  ");
 
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
             }
             else   if (jogadores[i].posicao == 9)
@@ -4291,8 +4749,8 @@ while (1)
             printf("Pague o Aluguel            ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 22  ");
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
             }
           
@@ -4307,8 +4765,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 20  ");
 
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
             }
             else if (jogadores[i].posicao == 13)
@@ -4322,8 +4780,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 18  ");
 
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
             }
             else if (jogadores[i].posicao == 14)
@@ -4336,8 +4794,8 @@ while (1)
             printf("Pague o aluguel       ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 18  ");
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
             }
             else if (jogadores[i].posicao == 17)
@@ -4352,8 +4810,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 38  ");
 
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
             }
            
@@ -4368,8 +4826,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 40  ");
 
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
             }
              else if (jogadores[i].posicao == 20)
@@ -4394,8 +4852,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 12  ");
 
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
             }
               else if (jogadores[i].posicao == 23)
@@ -4409,8 +4867,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 10  ");
             
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
             }
            
@@ -4425,8 +4883,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 16  ");
 
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
          
             }
@@ -4441,8 +4899,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 14  ");
 
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
 
             }
@@ -4457,8 +4915,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 14 ");
 
-               jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+               jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
 
             }
@@ -4473,8 +4931,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 26  ");
 
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
 
             }
@@ -4489,8 +4947,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 32  ");
 
-               jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+               jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
 
             }
@@ -4504,8 +4962,8 @@ while (1)
             printf("Pague o aluguel              ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 30  ");
-               jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+               jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
 
             }
@@ -4519,8 +4977,8 @@ while (1)
             printf("Pague o Aluguel              ");
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 30  ");
-               jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+               jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
 
             }
@@ -4535,8 +4993,8 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 28  ");
             
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
 
             }
@@ -4551,93 +5009,61 @@ while (1)
             gotoxy(13, y2+7);
             printf("\033[1m Valor : BI$ 26  ");
 
-            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[h].aluguel;
-            jogadores[hipotecas[h].comprado].dinheiro = jogadores[hipotecas[h].comprado].dinheiro + hipotecas[h].aluguel;
+            jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[jogadores[i].posicao].aluguel;
+            jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro = jogadores[hipotecas[jogadores[i].posicao].comprado].dinheiro + hipotecas[jogadores[i].posicao].aluguel;
 
 
             }
- }
+ //}
         }
             
             
          if (i == 0)
             {
-               acc =   jogadores[0].posicao;
+                  if (jogadores[0].dinheiro < 0)
+               {
+                  gotoxy(13, y2+2);
+                  printf("\033[1mJogador 1 ");
+                  gotoxy(13, y2+3);
+                  printf("\033[1m PERDEU    ");
+                  gotoxy(13, y2+4);
+                  printf("\033[1mPERDEU ");
+                  gotoxy(13, y2+5);
+                  printf("PERDEU");
+
+                   fim = fim -1;
+               }
+            acc =  jogadores[0].posicao;
             gotoxy(13, y2+2);
 	         printf("\033[1mJogador 1 ");
             gotoxy(13, y2+3);
-	         printf("\033[1mCor Vermelho   ");
+	         printf("\033[1mCor Vermelho       ");
             gotoxy(13, y2+4);
 	         printf("\033[1mDinheiro: %d    ", jogadores[0].dinheiro);
             gotoxy(13, y2+5);
             printf("jogador esta na casa: %d     ", acc);
 
-            if (hipotecas[acc].comprado != 0 && hipotecas[acc].comprado == 5 )
-            {
-        
-            gotoxy(13, y2+9);
-            printf("Comprar digite s: ");
-            gotoxy(33, y2+9);
-            scanf("%c", &confirmar);
-               if (confirmar == 's')
-                  {
-                     hipotecas[acc].comprado = i;
-                     jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[acc].valor;
-                        gotoxy(13, y2+9);
-                        printf("        Comprado               ");
-                        gotoxy(33, y2+9);
-                        printf("        ");
-                        
-                  }
-                  else
-                     {
-                           gotoxy(13, y2+9);
-                           printf("                       ");
-                           gotoxy(33, y2+9);
-                           printf("                    ");
-                     }
-         
 
-            }
-            
-            
-             if (hipotecas[acc].comprado == 0)
+             if (hipotecas[acc].comprado == 0 )
             {
-        
+               
             gotoxy(13, y2+9);
-            printf("Comprar hotel? -> %d <-: ", i);
- 
-               jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[acc].valor + 50;
-               hipotecas[acc].aluguel = hipotecas[acc].aluguel *3;
+            printf("Comprar casa? -> %d <-: ", i);
+            scanf("%c", &confirmar);
+             if (confirmar == 's')
+                  {
+                  jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[acc].valor + 50;
+                  hipotecas[acc].aluguel = hipotecas[acc].aluguel *3;
                   gotoxy(13, y2+9);
                   printf("                       ");
                   gotoxy(33, y2+9);
-                  printf("  ");
+                  printf("                          "           );
+                  }
+ 
+               
 
             }
-            
-            
-            
-            
-            confirmar = "";
-            acc = 0;
-            }
-           
-        
-          else if (i == 1)
-            {
-               acc =   jogadores[1].posicao;
-
-              gotoxy(13, y2+2);
-	        printf("\033[1mJogador 2  ");
-            gotoxy(13, y2+3);
-	        printf("\033[1mCor azul   ");
-            gotoxy(13, y2+4);
-	        printf("\033[1mDinheiro: %d    ", jogadores[1].dinheiro);
-             gotoxy(13, y2+5);
-            printf("jogador esta na casa: %d     ", acc);
-          
-              if (hipotecas[acc].comprado != 0 && hipotecas[acc].comprado == 5 )
+            if (hipotecas[acc].comprado != 0 && hipotecas[acc].comprado == 5 && jogadores[0].dinheiro > hipotecas[acc].valor)
             {
         
             gotoxy(13, y2+9);
@@ -4664,41 +5090,58 @@ while (1)
          
 
             }
-            
-            
+
+            confirmar = "";
+            acc = 0;
+            }
+                     if (i == 1)
+            {
+               if (jogadores[1].dinheiro < 0)
+               {
+                  gotoxy(13, y2+2);
+                  printf("\033[1mJogador 2 ");
+                  gotoxy(13, y2+3);
+                  printf("\033[1m PERDEU    ");
+                  gotoxy(13, y2+4);
+                  printf("\033[1mPERDEU ");
+                  gotoxy(13, y2+5);
+                  printf("PERDEU");
+
+                  fim = fim -1;
+
+               }
+               
+            acc =  jogadores[1].posicao;
+            gotoxy(13, y2+2);
+	         printf("\033[1mJogador 2 ");
+            gotoxy(13, y2+3);
+	         printf("\033[1mCor Azul       ");
+            gotoxy(13, y2+4);
+	         printf("\033[1mDinheiro: %d    ", jogadores[1].dinheiro);
+            gotoxy(13, y2+5);
+            printf("jogador esta na casa: %d     ", acc);
+
+
              if (hipotecas[acc].comprado == 1)
             {
-        
+               
             gotoxy(13, y2+9);
-            printf("Comprar hotel? -> %d <-: ", i);
- 
-               jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[acc].valor + 50;
-               hipotecas[acc].aluguel = hipotecas[acc].aluguel *3;
+            printf("Comprar casa? -> %d <-: ", i);
+            scanf("%c", &confirmar);
+             if (confirmar == 's')
+                  {
+                  jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[acc].valor + 50;
+                  hipotecas[acc].aluguel = hipotecas[acc].aluguel *3;
                   gotoxy(13, y2+9);
                   printf("                       ");
                   gotoxy(33, y2+9);
-                  printf("  ");
+                  printf("                          "           );
+                  }
+ 
+               
 
             }
-            
-            
-            
-            
-            confirmar = "";
-            acc = 0;
-            }
-             if (i == 2)
-            {
-            gotoxy(13, y2+2);
-	        printf("\033[1mJogador 3   ");
-            gotoxy(13, y2+3);
-	        printf("\033[1mCor verde   ");
-            gotoxy(13, y2+4);
-	        printf("\033[1mDinheiro: %d    ", jogadores[2].dinheiro);
-             gotoxy(13, y2+5);
-            printf("jogador esta na casa: %d      ", jogadores[2].posicao);
-
-               if (hipotecas[acc].comprado != 0 && hipotecas[acc].comprado == 5 )
+            if (hipotecas[acc].comprado != 1 && hipotecas[acc].comprado == 5  && jogadores[0].dinheiro > hipotecas[acc].valor)
             {
         
             gotoxy(13, y2+9);
@@ -4726,40 +5169,130 @@ while (1)
 
             }
             
-            
+
+            confirmar = "";
+            acc = 0;
+            }
+                     if (i == 2)
+            {
+                  if (jogadores[2].dinheiro < 0)
+               {
+                  gotoxy(13, y2+2);
+                  printf("\033[1mJogador 3 ");
+                  gotoxy(13, y2+3);
+                  printf("\033[1m PERDEU    ");
+                  gotoxy(13, y2+4);
+                  printf("\033[1mPERDEU ");
+                  gotoxy(13, y2+5);
+                  printf("PERDEU");
+
+                  fim = fim -1;
+               }
+            acc =  jogadores[2].posicao;
+            gotoxy(13, y2+2);
+	         printf("\033[1mJogador 3 ");
+            gotoxy(13, y2+3);
+	         printf("\033[1mCor Verde         ");
+            gotoxy(13, y2+4);
+	         printf("\033[1mDinheiro: %d    ", jogadores[2].dinheiro);
+            gotoxy(13, y2+5);
+            printf("jogador esta na casa: %d     ", acc);
+
+
              if (hipotecas[acc].comprado == 2)
             {
-        
+               
             gotoxy(13, y2+9);
-            printf("Comprar hotel? -> %d <-: ", i);
- 
-               jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[acc].valor + 50;
-               hipotecas[acc].aluguel = hipotecas[acc].aluguel *3;
+            printf("Comprar casa? -> %d <-: ", i);
+            scanf("%c", &confirmar);
+             if (confirmar == 's')
+                  {
+                  jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[acc].valor + 50;
+                  hipotecas[acc].aluguel = hipotecas[acc].aluguel *3;
                   gotoxy(13, y2+9);
                   printf("                       ");
                   gotoxy(33, y2+9);
-                  printf("  ");
+                  printf("                          "           );
+                  }
+ 
+               
 
             }
-            
-            
-            
+            if (hipotecas[acc].comprado != 2 && hipotecas[acc].comprado == 5 && jogadores[0].dinheiro > hipotecas[acc].valor)
+            {
+        
+            gotoxy(13, y2+9);
+            printf("Comprar digite s: ");
+            gotoxy(33, y2+9);
+            scanf("%c", &confirmar);
+               if (confirmar == 's')
+                  {
+                     hipotecas[acc].comprado = i;
+                     jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[acc].valor;
+                        gotoxy(13, y2+9);
+                        printf("        Comprado               ");
+                        gotoxy(33, y2+9);
+                        printf("        ");
+                        
+                  }
+                  else
+                     {
+                           gotoxy(13, y2+9);
+                           printf("                       ");
+                           gotoxy(33, y2+9);
+                           printf("                    ");
+                     }
+         
+
+            }
             
             confirmar = "";
             acc = 0;
             }
-             if (i == 3)
+                     if (i == 3)
             {
+                  if (jogadores[3].dinheiro < 0)
+               {
+                  gotoxy(13, y2+2);
+                  printf("\033[1mJogador 4 ");
+                  gotoxy(13, y2+3);
+                  printf("\033[1m PERDEU    ");
+                  gotoxy(13, y2+4);
+                  printf("\033[1mPERDEU ");
+                  gotoxy(13, y2+5);
+                  printf("PERDEU");
+               }
+            acc =  jogadores[3].posicao;
             gotoxy(13, y2+2);
-	        printf("\033[1mJogador 4  ");
+	         printf("\033[1mJogador 4 ");
             gotoxy(13, y2+3);
-	        printf("\033[1mCor amarelo   ");
+	         printf("\033[1mCor Amarelo   ");
             gotoxy(13, y2+4);
-	        printf("\033[1mDinheiro: %d    ", jogadores[3].dinheiro);
+	         printf("\033[1mDinheiro: %d    ", jogadores[3].dinheiro);
             gotoxy(13, y2+5);
-            printf("jogador esta na casa: %d     ", jogadores[3].posicao);
+            printf("jogador esta na casa: %d     ", acc);
 
-               if (hipotecas[acc].comprado != 0 && hipotecas[acc].comprado == 5 )
+
+             if (hipotecas[acc].comprado == 3)
+            {
+               
+            gotoxy(13, y2+9);
+            printf("Comprar casa? -> %d <-: ", i);
+            scanf("%c", &confirmar);
+             if (confirmar == 's')
+                  {
+                  jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[acc].valor + 50;
+                  hipotecas[acc].aluguel = hipotecas[acc].aluguel *3;
+                  gotoxy(13, y2+9);
+                  printf("                       ");
+                  gotoxy(33, y2+9);
+                  printf("                          "           );
+                  }
+ 
+               
+
+            }
+            if (hipotecas[acc].comprado != 3 && hipotecas[acc].comprado == 5 && jogadores[0].dinheiro > hipotecas[acc].valor)
             {
         
             gotoxy(13, y2+9);
@@ -4788,20 +5321,6 @@ while (1)
             }
             
             
-             if (hipotecas[acc].comprado == 3)
-            {
-        
-            gotoxy(13, y2+9);
-            printf("Comprar hotel? -> %d <-: ", i);
- 
-               jogadores[i].dinheiro = jogadores[i].dinheiro - hipotecas[acc].valor + 50;
-               hipotecas[acc].aluguel = hipotecas[acc].aluguel *3;
-                  gotoxy(13, y2+9);
-                  printf("                       ");
-                  gotoxy(33, y2+9);
-                  printf("  ");
-
-            }
             
             
             
@@ -4809,12 +5328,11 @@ while (1)
             confirmar = "";
             acc = 0;
             }
+
+            //------------------//
+           
         
-
-
-        
-       
-
+          
 
 
         }     
